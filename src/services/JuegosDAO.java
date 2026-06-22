@@ -5,17 +5,18 @@ import model.JuegosModel;
 import java.util.List;
 
 public interface JuegosDAO {
-    // CRUD básico
-    public void listarJuegos();
-    public List<JuegosModel> getJuegos();
-    public void registrarJuego();
-    public void actualizarJuego();
-    public void eliminarJuego();
 
-    // Operaciones avanzadas
-    public void buscarJuegosPorTitulo();
-    public void buscarJuegosPorCategoria();
-    public void buscarJuegosPorRangoPrecio();
-    public void comprarJuego();  // Usando CallableStatement
-    public void listarJuegosConDescuento();  // JOIN con descuentos
+    boolean insertar(JuegosModel juego);
+
+    boolean actualizar(JuegosModel juego);
+
+    boolean eliminar(int id_juego);
+
+    JuegosModel buscarPorId(int id_juego);
+
+    List<JuegosModel> listarTodos();
+
+    List<JuegosModel> buscarPorTitulo(String titulo);
+
+    boolean existe(int id_juego);
 }

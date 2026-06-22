@@ -11,39 +11,34 @@ public class JuegosController {
     private JuegosDAO juegosDAO;
 
     public JuegosController(DatabaseConnector databaseConnector) {
-        this.juegosDAO = new JuegosDAOImplementation(databaseConnector);
+        juegosDAO = new JuegosDAOImplementation(databaseConnector);
     }
 
-    // CRUD básico
-    public void listarJuegos() {
-        juegosDAO.listarJuegos();
+    public boolean guardarJuego(JuegosModel juego) {
+        return juegosDAO.insertar(juego);
     }
-    public void registrarJuego() {
-        juegosDAO.registrarJuego();
+
+    public boolean actualizarJuego(JuegosModel juego) {
+        return juegosDAO.actualizar(juego);
     }
-    public void actualizarJuego() {
-        juegosDAO.actualizarJuego();
+
+    public boolean eliminarJuego(int idJuego) {
+        return juegosDAO.eliminar(idJuego);
     }
-    public void eliminarJuego() {
-        juegosDAO.eliminarJuego();
+
+    public JuegosModel buscarPorId(int idJuego) {
+        return juegosDAO.buscarPorId(idJuego);
     }
-    // Operaciones avanzadas
-    public void buscarPorTitulo() {
-        juegosDAO.buscarJuegosPorTitulo();
+
+    public List<JuegosModel> listarJuegos() {
+        return juegosDAO.listarTodos();
     }
-    public void buscarPorCategoria() {
-        juegosDAO.buscarJuegosPorCategoria();
+
+    public List<JuegosModel> buscarPorTitulo(String titulo) {
+        return juegosDAO.buscarPorTitulo(titulo);
     }
-    public void buscarPorRangoPrecio() {
-        juegosDAO.buscarJuegosPorRangoPrecio();
-    }
-    public void comprarJuego() {
-        juegosDAO.comprarJuego();
-    }
-    public void listarOfertas() {
-        juegosDAO.listarJuegosConDescuento();
-    }
-    public List<JuegosModel> getJuegos() {
-        return juegosDAO.getJuegos();
+
+    public boolean existe(int idJuego) {
+        return juegosDAO.existe(idJuego);
     }
 }
