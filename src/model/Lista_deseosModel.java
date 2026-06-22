@@ -3,24 +3,14 @@ package model;
 import java.sql.Date;
 
 public class Lista_deseosModel {
-    private int id_deseos;
     private int id_usuario;
     private int id_juego;
     private Date fechaa_agregado;
 
-    public Lista_deseosModel(int id_deseos, int id_usuario, int id_juego, Date fechaa_agregado) {
-        this.id_deseos = id_deseos;
+    public Lista_deseosModel(int id_usuario, int id_juego, Date fechaa_agregado) {
         this.id_usuario = id_usuario;
         this.id_juego = id_juego;
         this.fechaa_agregado = fechaa_agregado;
-    }
-
-    public int getId_deseos() {
-        return id_deseos;
-    }
-
-    public void setId_deseos(int id_deseos) {
-        this.id_deseos = id_deseos;
     }
 
     public int getId_usuario() {

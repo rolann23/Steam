@@ -4,6 +4,7 @@ import java.sql.Date;
 
 public class UsuariosModel {
     private int id_usuario;
+    private int id_pais;
     private String nombre_usuario;
     private String correo;
     private String contrasena;
@@ -11,14 +12,23 @@ public class UsuariosModel {
     private float saldo_billetera;
     private Date fecha_registro;
 
-    public UsuariosModel(int id_usuario, String nombre_usuario, String correo, String contrasena, String avatar_url, float saldo_billetera, Date fecha_registro) {
+    public UsuariosModel(int id_usuario, int id_pais, String nombre_usuario, String correo, String contrasena, String avatar_url, float saldo_billetera, Date fecha_registro) {
         this.id_usuario = id_usuario;
+        this.id_pais = id_pais;
         this.nombre_usuario = nombre_usuario;
         this.correo = correo;
         this.contrasena = contrasena;
         this.avatar_url = avatar_url;
         this.saldo_billetera = saldo_billetera;
         this.fecha_registro = fecha_registro;
+    }
+
+    public int getId_pais() {
+        return id_pais;
+    }
+
+    public void setId_pais(int id_pais) {
+        this.id_pais = id_pais;
     }
 
     public int getId_usuario() {

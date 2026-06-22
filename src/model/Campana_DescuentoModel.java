@@ -2,17 +2,15 @@ package model;
 
 import java.sql.Date;
 
-public class DescuentosModel {
+public class Campana_DescuentoModel {
     private int id_descuento;
-    private int id_juego;
-    private float porcentaje;
+    private String nombre_campana;
     private Date fecha_inicio;
     private Date fecha_fin;
 
-    public DescuentosModel(int id_descuento, int id_juego, float porcentaje, Date fecha_inicio, Date fecha_fin) {
+    public Campana_DescuentoModel(int id_descuento, String nombre_campana, Date fecha_inicio, Date fecha_fin) {
         this.id_descuento = id_descuento;
-        this.id_juego = id_juego;
-        this.porcentaje = porcentaje;
+        this.nombre_campana = nombre_campana;
         this.fecha_inicio = fecha_inicio;
         this.fecha_fin = fecha_fin;
     }
@@ -25,20 +23,12 @@ public class DescuentosModel {
         this.id_descuento = id_descuento;
     }
 
-    public int getId_juego() {
-        return id_juego;
+    public String getNombre_campana() {
+        return nombre_campana;
     }
 
-    public void setId_juego(int id_juego) {
-        this.id_juego = id_juego;
-    }
-
-    public float getPorcentaje() {
-        return porcentaje;
-    }
-
-    public void setPorcentaje(float porcentaje) {
-        this.porcentaje = porcentaje;
+    public void setNombre_campana(String nombre_campana) {
+        this.nombre_campana = nombre_campana;
     }
 
     public Date getFecha_inicio() {

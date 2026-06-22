@@ -10,23 +10,24 @@ public class DatabaseConnector {
     private String password;
 
     public DatabaseConnector(String url, String databaseName,
-                             String userName, String password){
+                             String userName, String password) {
         this.url = url;
         this.databaseName = databaseName;
         this.userName = userName;
         this.password = password;
     }
-    public void ConnectDatabase(){
-        try{
-            connection = DriverManager.getConnection(url+databaseName,
-                    userName,password);
+
+    public void ConnectDatabase() {
+        try {
+            connection = DriverManager.getConnection(url + databaseName,
+                    userName, password);
             System.out.println("Conexión exitosa");
         } catch (Exception e) {
             System.out.println(e.getMessage());
         }
     }
-    public Connection GetConnection(){
 
+    public Connection GetConnection() {
         return connection;
     }
 }

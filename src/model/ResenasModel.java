@@ -6,11 +6,11 @@ public class ResenasModel {
     private int id_resena;
     private int id_usuario;
     private int id_juego;
-    private String recomendado;
+    private boolean recomendado;
     private String contenido;
     private Date fecha_resena;
 
-    public ResenasModel(int id_resena, int id_usuario, int id_juego, String recomendado, String contenido, Date fecha_resena) {
+    public ResenasModel(int id_resena, int id_usuario, int id_juego, boolean recomendado, String contenido, Date fecha_resena) {
         this.id_resena = id_resena;
         this.id_usuario = id_usuario;
         this.id_juego = id_juego;
@@ -43,11 +43,11 @@ public class ResenasModel {
         this.id_juego = id_juego;
     }
 
-    public String getRecomendado() {
+    public boolean isRecomendado() {
         return recomendado;
     }
 
-    public void setRecomendado(String recomendado) {
+    public void setRecomendado(boolean recomendado) {
         this.recomendado = recomendado;
     }
 

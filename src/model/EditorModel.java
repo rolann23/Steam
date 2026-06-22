@@ -2,14 +2,12 @@ package model;
 
 public class EditorModel {
     private int id_editor;
-    private int id_juego;
     private String nombre_editor;
     private String imagenE_url;
     private String descripcionE;
 
-    public EditorModel(int id_editor, int id_juego, String nombre_editor, String imagenE_url, String descripcionE) {
+    public EditorModel(int id_editor, String nombre_editor, String imagenE_url, String descripcionE) {
         this.id_editor = id_editor;
-        this.id_juego = id_juego;
         this.nombre_editor = nombre_editor;
         this.imagenE_url = imagenE_url;
         this.descripcionE = descripcionE;
@@ -21,14 +19,6 @@ public class EditorModel {
 
     public void setId_editor(int id_editor) {
         this.id_editor = id_editor;
-    }
-
-    public int getId_juego() {
-        return id_juego;
-    }
-
-    public void setId_juego(int id_juego) {
-        this.id_juego = id_juego;
     }
 
     public String getNombre_editor() {

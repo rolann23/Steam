@@ -3,26 +3,16 @@ package model;
 import java.sql.Date;
 
 public class BibliotecaModel {
-    private int id_biblioteca;
     private int id_usuario;
     private int id_juego;
     private Date fecha_adquirido;
     private int horas_jugadas;
 
-    public BibliotecaModel(int id_biblioteca, int id_usuario, int id_juego, Date fecha_adquirido, int horas_jugadas) {
-        this.id_biblioteca = id_biblioteca;
+    public BibliotecaModel(int id_usuario, int id_juego, Date fecha_adquirido, int horas_jugadas) {
         this.id_usuario = id_usuario;
         this.id_juego = id_juego;
         this.fecha_adquirido = fecha_adquirido;
         this.horas_jugadas = horas_jugadas;
-    }
-
-    public int getId_biblioteca() {
-        return id_biblioteca;
-    }
-
-    public void setId_biblioteca(int id_biblioteca) {
-        this.id_biblioteca = id_biblioteca;
     }
 
     public int getId_usuario() {
